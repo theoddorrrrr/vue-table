@@ -73,7 +73,7 @@ export const statusHandler = defineComponent({
       props.onUpdateValue(inputValue.value);
       isEdit.value = false;
     }
-    
+
     return () =>
       h(
         "div",
