@@ -32,21 +32,6 @@ export function summary(pageData) {
             pageData.reduce((prevValue, row) => prevValue + row.revenue, 0)
           )
         ),
-        h(
-          "div",
-          {},
-          "Total revenue: ",
-          h(
-            "span",
-            {
-              style: "opacity: 0.9; color: #18a058;",
-            },
-            this._rawValue.reduce(
-              (prevValue, row) => prevValue + row.revenue,
-              0
-            )
-          )
-        ),
       ]),
       colSpan: 7,
     },
@@ -139,7 +124,7 @@ export const percentHandler = defineComponent({
                   ? (inputValue.value = v)
                   : notification.warning({
                       title: "Oops!",
-                      content: "You can enter only percent from 0 to 100",
+                      content: "You can enter only percents from 0 to 100",
                       duration: 2000,
                     });
               },

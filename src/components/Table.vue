@@ -101,7 +101,7 @@ export default defineComponent({
           sorter: "default",
         },
       ],
-      summary: summary.bind(data),
+      summary,
       pagination: ref({ pageSize: 5 }),
       clearFilters() {
         dataTableInstRef.value.filter(null);
